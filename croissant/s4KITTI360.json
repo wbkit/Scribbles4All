@@ -1,0 +1,114 @@
+
+
+{
+    "@context": {
+      "@language": "en",
+      "@vocab": "https://schema.org/",
+      "citeAs": "cr:citeAs",
+      "column": "cr:column",
+      "conformsTo": "dct:conformsTo",
+      "cr": "http://mlcommons.org/croissant/",
+      "rai": "http://mlcommons.org/croissant/RAI/",
+      "data": {
+        "@id": "cr:data",
+        "@type": "@json"
+      },
+      "dataType": {
+        "@id": "cr:dataType",
+        "@type": "@vocab"
+      },
+      "dct": "http://purl.org/dc/terms/",
+      "examples": {
+        "@id": "cr:examples",
+        "@type": "@json"
+      },
+      "extract": "cr:extract",
+      "field": "cr:field",
+      "fileProperty": "cr:fileProperty",
+      "fileObject": "cr:fileObject",
+      "fileSet": "cr:fileSet",
+      "format": "cr:format",
+      "includes": "cr:includes",
+      "isLiveDataset": "cr:isLiveDataset",
+      "jsonPath": "cr:jsonPath",
+      "key": "cr:key",
+      "md5": "cr:md5",
+      "parentField": "cr:parentField",
+      "path": "cr:path",
+      "recordSet": "cr:recordSet",
+      "references": "cr:references",
+      "regex": "cr:regex",
+      "repeated": "cr:repeated",
+      "replace": "cr:replace",
+      "sc": "https://schema.org/",
+      "separator": "cr:separator",
+      "source": "cr:source",
+      "subField": "cr:subField",
+      "transform": "cr:transform"
+    },
+    "@type": "sc:Dataset",
+    "name": "s4KITTI360",
+    "description": "The scribble labels for the s4KITTI360 dataset. This provides the automatically generated scribble labels for the KITTI360 dataset.",
+    "conformsTo": "http://mlcommons.org/croissant/1.0",
+    "creator": {
+      "@type": "sc:Person",
+      "name": "Wolfgang Boettcher",
+      "url": "https://github.com/wbkit/Scribbles4All/"
+    },
+    "license": "CC BY 4.0",
+    "url": "https://github.com/wbkit/Scribbles4All/",
+    "version": "1.0.0",
+    "distribution": [
+      {
+        "@type": "cr:FileObject",
+        "@id": "github-repository",
+        "name": "github-repository",
+        "description": "Scribbles4All on GitHub",
+        "contentUrl": "https://github.com/wbkit/Scribbles4All/",
+        "encodingFormat": "git+https",
+        "sha256": "main"
+      },
+      {
+        "@type": "cr:FileSet",
+        "@id": "label-files",
+        "name": "label-files",
+        "description": "s4KITTI360 dataset archives",
+        "containedIn": {
+          "@id": "github-repository"
+        },
+        "encodingFormat": "application/x-tar",
+        "includes": "s4KITTI360/train/*.tar.gz"
+      }
+    ],
+    "recordSet": [
+      {
+        "@type": "cr:RecordSet",
+        "@id": "scribbles",
+        "name": "scribbles",
+        "field": [
+          {
+            "@type": "cr:Field",
+            "@id": "scribbles/filename",
+            "name": "filename",
+            "dataType": "sc:Text",
+            "source": {
+              "fileSet": {
+                "@id": "label-files"
+              }
+            }
+          },
+          {
+            "@type": "cr:Field",
+            "@id": "scribbles/label",
+            "name": "label",
+            "dataType": "sc:ImageObject",
+            "source": {
+              "fileSet": {
+                "@id": "label-files"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }  
