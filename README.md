@@ -1,12 +1,15 @@
 # Scribbles4All
 
-The datasets are linked under [Link](https://drive.google.com/drive/folders/1PkH-UjxbW77PRhbr4SzYGSBKBNOanJWO?usp=sharing)
+The paper preprint is available on arXiv under:
+
+### [Scribbles4All](http://arxiv.org/abs/2408.12489)
 
 ## Roadmap
 - [x] Publish the s4 datasets
 - [x] Move dataset location to GitHub
 - [ ] Publish the scribbble generation code
 - [x] Add Croissant metadata standard
+- [ ] Provide download helper tools
 
 
 ## License
