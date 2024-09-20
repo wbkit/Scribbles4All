@@ -9,7 +9,17 @@ The paper preprint is available on arXiv under:
 - [x] Move dataset location to GitHub
 - [ ] Publish the scribbble generation code
 - [x] Add Croissant metadata standard
-- [ ] Provide download helper tools
+- [x] Provide download helper tools
+
+
+## Dataset extraction
+The s4Pascal dataset can be extracted directly by calling 
+`tar -xzf s4Pascal.tar.gz`.
+For the other datasets we recommend calling the respective unpacking scripts. Those will unpack the multiple tarballs and create the proper folder structure to copy-paste the scribble labels into the maind-dataset folder structure.
+
+    ./extractADE.sh
+    ./extractCityscapes.sh 
+    ./extractKITTI360.sh 
 
 
 ## License
