@@ -4,11 +4,11 @@ permalink: /
 
 title: Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets
 authors:
-    Wolfgang Boettcher^1^, Lukas Hoyer^2^, Ozan Unal^2,3^, Jan Eric Lenssen^1^, Bernt Schiele^1^
+    Wolfgang Boettcher<sup>1</sup>, Lukas Hoyer<sup>2</sup>, Ozan Unal<sup>2,3</sup>, Jan Eric Lenssen<sup>1</sup>, Bernt Schiele<sup>1</sup>
 affiliations:
-    MPI for Informatics, Saarland Informatics Campus, Germany
-    ETH Zurich, Switzerland
-    Huawei Technologies, Switzerland
+    <sup>1</sup>MPI for Informatics, Saarland Informatics Campus, Germany \n
+    <sup>2</sup>ETH Zurich, Switzerland \n
+    <sup>3</sup>Huawei Technologies, Switzerland
 paper: https://www.arxiv.org/abs/2408.12489
 code: https://github.com/wbkit/Scribbles4All
 data: https://github.com/wbkit/Scribbles4All
@@ -37,7 +37,7 @@ mentation models on our datasets and show that models trained with our synthetic
 labels perform competitively with respect to models trained on manual labels.
 Thus, our datasets enable state-of-the-art research into methods for scribble-labeled
 semantic segmentation. The datasets, scribble generation algorithm, and baselines
-are publicly available at [Githib Link](https://github.com/wbkit/Scribbles4All).
+are publicly available at <a href="https://github.com/wbkit/Scribbles4All">Github Link</a>
         </div>
     </div>
 </div>
