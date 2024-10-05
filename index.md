@@ -4,11 +4,11 @@ permalink: /
 
 title: Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets
 authors:
-    <a href="https://www.linkedin.com/in/wolfgang-boettcher/">Wolfgang Boettcher</a><sup>1</sup>, <a href="https://lhoyer.github.io/">Lukas Hoyer<sup>2</sup>, 
+    <a href="https://www.linkedin.com/in/wolfgang-boettcher/">Wolfgang Boettcher</a><sup>1</sup>, <a href="https://lhoyer.github.io/">Lukas Hoyer</a><sup>2</sup>, 
         <a href="https://www.linkedin.com/in/ozan-unal/">Ozan Unal</a><sup>2,3</sup>, <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>1</sup>, 
         <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/">Bernt Schiele</a><sup>1</sup>
 affiliations:
-    <sup>1</sup>MPI for Informatics, Saarland Informatics Campus, Germany <br />
+    <sup>1</sup>MPI for Informatics, Germany <br />
     <sup>2</sup>ETH Zurich, Switzerland <br />
     <sup>3</sup>Huawei Technologies, Switzerland
 paper: https://www.arxiv.org/abs/2408.12489
