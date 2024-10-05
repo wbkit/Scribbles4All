@@ -3,6 +3,7 @@ layout: project_page
 permalink: /
 
 title: Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets
+conference: NeurIPS2024 Datasets and Benchmarks
 authors:
     <a href="https://www.linkedin.com/in/wolfgang-boettcher/">Wolfgang Boettcher</a><sup>1</sup>, <a href="https://lhoyer.github.io/">Lukas Hoyer</a><sup>2</sup>, 
         <a href="https://www.linkedin.com/in/ozan-unal/">Ozan Unal</a><sup>2,3</sup>, <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>1</sup>, 
