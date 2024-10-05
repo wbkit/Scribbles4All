@@ -4,10 +4,10 @@ permalink: /
 
 title: Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets
 authors:
-    Wolfgang Boettcher, Lukas Hoyer, Ozan Unal, Jan Eric Lenssen, Bernt Schiele
+    Wolfgang Boettcher^1^, Lukas Hoyer^2^, Ozan Unal^2,3^, Jan Eric Lenssen^1^, Bernt Schiele^1^
 affiliations:
     MPI for Informatics, Saarland Informatics Campus, Germany
-    ETH Xurich, Switzerland
+    ETH Zurich, Switzerland
     Huawei Technologies, Switzerland
 paper: https://www.arxiv.org/abs/2408.12489
 code: https://github.com/wbkit/Scribbles4All
@@ -48,8 +48,8 @@ are publicly available at [Githib Link](https://github.com/wbkit/Scribbles4All).
 ## Citation
 ```
 @online{boettcherScribblesAllBenchmarking2024,
-  title = {Scribbles for {{All}}: {{Benchmarking Scribble Supervised Segmentation Across Datasets}}},
-  shorttitle = {Scribbles for {{All}}},
+  title = {Scribbles for All: Benchmarking Scribble Supervised Segmentation Across Datasets},
+  shorttitle = {Scribbles for All},
   author = {Boettcher, Wolfgang and Hoyer, Lukas and Unal, Ozan and Lenssen, Jan Eric and Schiele, Bernt},
   date = {2024-08-22},
   eprint = {2408.12489},
