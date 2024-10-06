@@ -40,22 +40,26 @@ models on our datasets and show that models trained with our synthetic
 labels perform competitively with respect to models trained on manual labels.
 Thus, our datasets enable state-of-the-art research into methods for scribble-labeled
 semantic segmentation. The datasets, scribble generation algorithm, and baselines
-are publicly available at <a href="https://github.com/wbkit/Scribbles4All">Github Link</a>
+are publicly available <a href="https://github.com/wbkit/Scribbles4All">here</a>.
         </div>
     </div>
 </div>
 
 ---
 
-## Which problem does Srcibbles4All solve?
+## Which problem does Scribbles4All(s4) solve?
 
 ![visual abstract](./static/image/teaserNew.png)
 lorep ipsuum lorem psium
 
-## How do the datasets look like?
+## How do the s4-datasets look like?
 ![datasets overview](./static/image/qualitative.png)
 
 lorep ipsuum lorem psium
+
+## How are the datasets generated?
+![Main algorithm steps](./static/image/ScribbleGen3.png)
+
 
 ## Citation
 ```
