@@ -49,9 +49,11 @@ are publicly available at <a href="https://github.com/wbkit/Scribbles4All">Githu
 
 ## Which problem does Srcibbles4All solve?
 
+![visual abstract](./static/image/teaserNew.png)
 lorep ipsuum lorem psium
 
 ## How do the datasets look like?
+![datasets overview](./static/image/qualitative.png)
 
 lorep ipsuum lorem psium
 
