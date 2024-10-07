@@ -50,40 +50,41 @@ are publicly available <a href="https://github.com/wbkit/Scribbles4All">here</a>
 ## Which problem does Scribbles4All(s4) solve?
 
 ![visual abstract](./static/image/teaserNew.png)
-The main limitation of scribbles as
-source for weak supervision is the lack of challenging datasets for scribble segmen-
-tation, which hinders the development of novel methods and conclusive evaluations.
 
-However, currently, there exists only one popular segmentation dataset with scribble labels, namely
-ScribbleSup, introduced by Lin et al. [23] for the PascalVOC dataset. An example image of it is
-shown in Fig. 2. Two challenges arise for the research area of scribble-supervised segmentation
-methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC
-is too easy to serve as the sole benchmark for scribble-supervised methods as visualized in Fig. 1. It
+The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for 
+scribble segmentation. This impedes the development of novel methods and conclusive evaluations.
+
+Nevertheless, at present, only one widely used segmentation dataset with scribble labels is available, 
+namely ScribbleSup, for the PascalVOC dataset. Two challenges emerge for the research area of scribble-supervised 
+segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC
+is too easy to serve as the sole benchmark for scribble-supervised methods as visualized above. It
 consists mostly of images with one object class and the background class. By learning precise class
 boundaries of the dominant background class, a model can already achieve high performance while
 the challenge of learning object-to-object boundaries is less relevant. In contrast, modern semantic
-segmentation faces additional challenges such as small object instances (e.g. poles in Cityscapes)
+segmentation is confronted with additional challenges such as small object instances (e.g. poles in Cityscapes)
 or a large number of semantic classes (e.g. 150 classes in ADE20K), which cannot be properly
-benchmarked with PascalVOC (see Fig. 1).
+benchmarked with PascalVOC.
 
 Scribbles for All provides an algorithm to create exactly those scribble-labelled datasets from any preexisting
-segmentation dataset. Further, we provide an initial set of four s4-datasets based on PascalVOC, ADE20K, 
+segmentation dataset. Further, we provide an initial collection of four s4-datasets based on PascalVOC, ADE20K, 
 Cityscapes and KITTI360 and also benchmark them. 
 
 ## How do the s4-datasets look like?
 ![datasets overview](./static/image/qualitative.png)
 
-Shown above are examples of the scribble labels created for the s4-datasets overlayed on the scene image. Further,
-there is the dense segmentation map for comparison as well as the prediction of a SOTA-method trained on the 
-s4-scribble dataset. Every instance on the original segmentaion map is annotated with a scribble if it exceeds 
-a dataset dependent minimum area. Beyond that, it also illustrates the need for more complex scribble datasets which 
-is addressed by this work. While the predictions for s4Pascal//ScribbleSup are very close to fully supervised standards, 
-the disparity between ground-truth and prediction is higher for the more complex datasets. This highlights the greater 
-challenge those datasets pose and creates meaningful benchmarks for more advanced weakly-supervised segmentation methods.
+The images displayed above illustrate the scribble labels generated for the s4-datasets, superimposed on the 
+scene image. Furthermore, a dense segmentation map is provided for comparison purposes, as well as the prediction 
+of a state-of-the-art (SOTA) method trained on the s4-scribble dataset. Each instance on the original segmentation 
+map is labelled with a scribble if it exceeds a minimum area threshold dependent on the dataset. Furthermore, this 
+illustrates the necessity for more complex scribble datasets, which is addressed by this work. While the predictions 
+for s4Pascal//ScribbleSup are very close to fully supervised standards,  the disparity between ground-truth and 
+prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets 
+and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
 
 
 ## How are the datasets generated?
 ![Main algorithm steps](./static/image/ScribbleGen3.png)
+
 
 
 ## Citation
