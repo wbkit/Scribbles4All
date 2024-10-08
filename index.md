@@ -100,17 +100,14 @@ labelling process.
 any class boundaries.
 
 The fundamental steps of the algorithm are outlined in the figure above.
-a) Size dependent erosion, 
 
+a) Size dependent erosion, 
 b) COM in red, sampling of points on
 the edge in green, determination of the approx. farthest pair in darker green and tentative scribble
 in blue 
-
 c) Sampling of two extra points along the tentative scribble 
-
 d) Fitting final scribble through
 points 
-
 e) Scribble overlayed on initial segmentation map.
 
 For further details feel free to read the paper.
