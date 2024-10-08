@@ -85,6 +85,19 @@ and establishes meaningful benchmarks for more sophisticated weakly supervised s
 ## How are the datasets generated?
 ![Main algorithm steps](./static/image/ScribbleGen3.png)
 
+The presented scribble generation algorithm takes an image with corresponding dense segmentation
+labels as input and produces a single scribble, represented as a set of points, for each object in the
+image. We formulate the following design objectives:
+    1. **Mimic human annotations.** The generated scribbles should approximately resemble scribbles
+that human annotators draw. Specifically, they are supposed to be more coarse for larger, simple
+geometries and more precise for detailed objects, as would be the case with hand-crafted labels.
+Also, the scribble is expected to go roughly through the centre part of an object and not to come
+too close to its margins for a large portion of its length.
+    2. **Probabilistic generation.** The generation of labels should occur in a probabilistic fashion to
+prevent mean collapse when confronted with similar shapes, maintaining enough variance in the
+labelling process.
+    3. **No boundary violation.** We also apply hard constraints that prevent scribbles from violating
+any class boundaries.
 
 
 ## Citation
