@@ -6,12 +6,11 @@ title: Scribbles for All - Benchmarking Scribble Supervised Segmentation Across 
 conference: NeurIPS2024 Datasets and Benchmarks
 authors:
     <a href="https://www.linkedin.com/in/wolfgang-boettcher/">Wolfgang Boettcher</a><sup>1</sup>, <a href="https://lhoyer.github.io/">Lukas Hoyer</a><sup>2</sup>, 
-        <a href="https://www.linkedin.com/in/ozan-unal/">Ozan Unal</a><sup>2,3</sup>, <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>1</sup>, 
+        <a href="https://www.linkedin.com/in/ozan-unal/">Ozan Unal</a><sup>2</sup>, <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>1</sup>, 
         <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/">Bernt Schiele</a><sup>1</sup>
 affiliations:
     <sup>1</sup>MPI for Informatics, Germany <br />
     <sup>2</sup>ETH Zurich, Switzerland <br />
-    <sup>3</sup>Huawei Technologies, Switzerland
 paper: https://www.arxiv.org/abs/2408.12489
 code: https://github.com/wbkit/Scribbles4All
 data: https://github.com/wbkit/Scribbles4All
