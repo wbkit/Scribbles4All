@@ -50,7 +50,7 @@ are publicly available <a href="https://github.com/wbkit/Scribbles4All">here</a>
 
 ![visual abstract](./static/image/teaserNew.png)
 
-The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for 
+<!-- The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for 
 scribble segmentation. This impedes the development of novel methods and conclusive evaluations.
 
 Nevertheless, at present, only one widely used segmentation dataset with scribble labels is available, 
@@ -66,7 +66,17 @@ benchmarked with PascalVOC.
 
 Scribbles for All provides an algorithm to create exactly those scribble-labelled datasets from any preexisting
 segmentation dataset. Further, we provide an initial collection of four s4-datasets based on PascalVOC, ADE20K, 
-Cityscapes and KITTI360 and also benchmark them. 
+Cityscapes and KITTI360 and also benchmark them.  -->
+The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for scribble segmentation. 
+This impedes the development of novel methods and conclusive evaluations. Two challenges emerge for the research area of 
+scribble-supervised segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC 
+is too easy to serve as the sole benchmark for scribble-supervised methods as visualized above.
+
+Therefore, we present Scribbles for All:
+-	We present an algorithm to convert every densely-labelled dataset into a scribble supervised dataset
+-	We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360
+-	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
+
 
 ## How do the s4-datasets look like?
 ![datasets overview](./static/image/qualitative.png)
