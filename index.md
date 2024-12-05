@@ -87,8 +87,8 @@ Therefore, we present Scribbles for All:
 
 <div class="column is-four-fifths">
     <img-comparison-slider>
-        <img slot="first" src="image/teacher0.png" />
-        <img slot="second" src="image/teacher5.png" />
+        <img slot="first" src="/Scribbles4All/static/image/teacher0.png" />
+        <img slot="second" src="/Scribbles4All/static/image/teacher5.png" />
     </img-comparison-slider>
 </div>
 
