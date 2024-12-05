@@ -17,6 +17,14 @@ data: https://github.com/wbkit/Scribbles4All
 ---
 
 <!-- Using HTML to center the abstract -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
 <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
         <h2>Abstract</h2>
@@ -77,6 +85,10 @@ Therefore, we present Scribbles for All:
 -	We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360
 -	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
 
+<img-comparison-slider>
+  <img slot="first" src="image/qualitative.png" />
+  <img slot="second" src="image/teaserNew.png" />
+</img-comparison-slider>
 
 ## How do the s4-datasets look like?
 ![datasets overview](./static/image/qualitative.png)
