@@ -158,7 +158,6 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   gap: 10px; /* Space between sub-divs */
   padding: 20px;
