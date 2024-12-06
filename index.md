@@ -98,8 +98,9 @@ prediction is higher for the more complex datasets. This emphasises the greater 
 and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
 
 # How do SOTA methods perform on s4Datasets?
-
-<div class="column is-four-fifths" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px; text-align: center;">
+Below, we illustrate the prediction differences of models trained on our challenging s4Datasets compared to
+a fully supervised model. (The examples are generated with the SegformerB4-backbone, the SASS method is EMA)
+<div class="columns is-centered has-text-centered" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px;">
     <div style="flex: 1; text-align: center; padding: 5px;">
         <img-comparison-slider>
             <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
