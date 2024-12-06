@@ -73,6 +73,8 @@ prediction is higher for the more complex datasets. This emphasises the greater 
 and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
 
 ## How do SOTA Methods compare on Scribbles vs Full Supervision?
+<script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
 <!-- <div>
     <div class="image-box">
         <img-comparison-slider>
