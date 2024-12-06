@@ -94,6 +94,10 @@ Therefore, we present Scribbles for All:
         <img slot="first" src="/Scribbles4All/static/image/hamburgSUP.png" />
         <img slot="second" src="/Scribbles4All/static/image/hamburgEMA.png" />
     </img-comparison-slider>
+    <img-comparison-slider>
+        <img slot="first" src="/Scribbles4All/static/image/dusseldorfSUP.png" />
+        <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
+    </img-comparison-slider>
 </div>
 
 ## How do the s4-datasets look like?
