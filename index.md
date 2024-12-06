@@ -86,18 +86,24 @@ Therefore, we present Scribbles for All:
 -	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
 
 <div class="column is-four-fifths" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px;">
-    <img-comparison-slider>
-        <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
-        <img slot="second" src="/Scribbles4All/static/image/bremenEMA.png" />
-    </img-comparison-slider>
-    <img-comparison-slider>
-        <img slot="first" src="/Scribbles4All/static/image/hamburgSUP.png" />
-        <img slot="second" src="/Scribbles4All/static/image/hamburgEMA.png" />
-    </img-comparison-slider>
-    <img-comparison-slider>
-        <img slot="first" src="/Scribbles4All/static/image/dusseldorfSUP.png" />
-        <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
-    </img-comparison-slider>
+    <div style="flex: 1; text-align: center; padding: 5px;">
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/bremenEMA.png" />
+        </img-comparison-slider>
+    </div>
+    <div style="flex: 1; text-align: center; padding: 5px;">
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/hamburgSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/hamburgEMA.png" />
+        </img-comparison-slider>
+    </div>
+    <div style="flex: 1; text-align: center; padding: 5px;">
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/dusseldorfSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
+        </img-comparison-slider>
+    </div>
 </div>
 
 ## How do the s4-datasets look like?
