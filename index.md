@@ -59,7 +59,21 @@ Therefore, we present Scribbles for All:
 -	We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360
 -	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
 
-<div class="container">
+
+## How do the s4-datasets look like?
+![datasets overview](./static/image/qualitative.png)
+
+The images displayed above illustrate the scribble labels generated for the s4-datasets, superimposed on the 
+scene image. Furthermore, a dense segmentation map is provided for comparison purposes, as well as the prediction 
+of a state-of-the-art (SOTA) method trained on the s4-scribble dataset. Each instance on the original segmentation 
+map is labelled with a scribble if it exceeds a minimum area threshold dependent on the dataset. Furthermore, this 
+illustrates the necessity for more complex scribble datasets, which is addressed by this work. While the predictions 
+for s4Pascal//ScribbleSup are very close to fully supervised standards,  the disparity between ground-truth and 
+prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets 
+and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
+
+## How do SOTA Methods comapre on Scribbles vs Full Supervision?
+<div>
     <div class="image-box">
         <img-comparison-slider>
             <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
@@ -79,19 +93,6 @@ Therefore, we present Scribbles for All:
         </img-comparison-slider>
     </div>
 </div>
-
-## How do the s4-datasets look like?
-![datasets overview](./static/image/qualitative.png)
-
-The images displayed above illustrate the scribble labels generated for the s4-datasets, superimposed on the 
-scene image. Furthermore, a dense segmentation map is provided for comparison purposes, as well as the prediction 
-of a state-of-the-art (SOTA) method trained on the s4-scribble dataset. Each instance on the original segmentation 
-map is labelled with a scribble if it exceeds a minimum area threshold dependent on the dataset. Furthermore, this 
-illustrates the necessity for more complex scribble datasets, which is addressed by this work. While the predictions 
-for s4Pascal//ScribbleSup are very close to fully supervised standards,  the disparity between ground-truth and 
-prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets 
-and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
-
 
 ## How are the datasets generated?
 ![Main algorithm steps](./static/image/ScribbleGen3.png)
