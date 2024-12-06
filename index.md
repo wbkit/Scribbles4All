@@ -72,8 +72,8 @@ for s4Pascal//ScribbleSup are very close to fully supervised standards,  the dis
 prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets 
 and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
 
-## How do SOTA Methods comapre on Scribbles vs Full Supervision?
-<div>
+## How do SOTA Methods compare on Scribbles vs Full Supervision?
+<!-- <div>
     <div class="image-box">
         <img-comparison-slider>
             <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
@@ -92,7 +92,7 @@ and establishes meaningful benchmarks for more sophisticated weakly supervised s
             <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
         </img-comparison-slider>
     </div>
-</div>
+</div> -->
 
 ## How are the datasets generated?
 ![Main algorithm steps](./static/image/ScribbleGen3.png)
