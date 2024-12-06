@@ -59,6 +59,7 @@ Therefore, we present Scribbles for All:
 -	We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360
 -	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
 
+<div class="column is-four-fifths">
 <div class="container">
     <div class="image-box">
         <img-comparison-slider>
@@ -78,6 +79,7 @@ Therefore, we present Scribbles for All:
             <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
         </img-comparison-slider>
     </div>
+</div>
 </div>
 
 ## How do the s4-datasets look like?
