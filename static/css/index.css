@@ -155,3 +155,21 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px; /* Space between sub-divs */
+  padding: 20px;
+  border: 2px solid #ccc; /* Optional border for the main div */
+  margin: auto;
+}
+
+/* Styling for each sub-div */
+.image-box {
+  flex: 1; /* Ensures equal size boxes */
+  text-align: center;
+  border: 1px solid #ddd; /* Optional border for sub-divs */
+  padding: 10px;
+}
