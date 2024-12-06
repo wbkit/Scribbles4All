@@ -17,14 +17,6 @@ data: https://github.com/wbkit/Scribbles4All
 ---
 
 <!-- Using HTML to center the abstract -->
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
-></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
-/>
 <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
         <h2>Abstract</h2>
@@ -57,24 +49,6 @@ are publicly available <a href="https://github.com/wbkit/Scribbles4All">here</a>
 ## Which problem does Scribbles4All(s4) solve?
 
 ![visual abstract](./static/image/teaserNew.png)
-
-<!-- The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for 
-scribble segmentation. This impedes the development of novel methods and conclusive evaluations.
-
-Nevertheless, at present, only one widely used segmentation dataset with scribble labels is available, 
-namely ScribbleSup, for the PascalVOC dataset. Two challenges emerge for the research area of scribble-supervised 
-segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC
-is too easy to serve as the sole benchmark for scribble-supervised methods as visualized above. It
-consists mostly of images with one object class and the background class. By learning precise class
-boundaries of the dominant background class, a model can already achieve high performance while
-the challenge of learning object-to-object boundaries is less relevant. In contrast, modern semantic
-segmentation is confronted with additional challenges such as small object instances (e.g. poles in Cityscapes)
-or a large number of semantic classes (e.g. 150 classes in ADE20K), which cannot be properly
-benchmarked with PascalVOC.
-
-Scribbles for All provides an algorithm to create exactly those scribble-labelled datasets from any preexisting
-segmentation dataset. Further, we provide an initial collection of four s4-datasets based on PascalVOC, ADE20K, 
-Cityscapes and KITTI360 and also benchmark them.  -->
 The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for scribble segmentation. 
 This impedes the development of novel methods and conclusive evaluations. Two challenges emerge for the research area of 
 scribble-supervised segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC 
@@ -85,12 +59,26 @@ Therefore, we present Scribbles for All:
 -	We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360
 -	We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods
 
-<!-- <div class="column is-four-fifths">
-    <img-comparison-slider>
-        <img slot="first" src="/Scribbles4All/static/image/teacher0.png" />
-        <img slot="second" src="/Scribbles4All/static/image/teacher5.png" />
-    </img-comparison-slider>
-</div> -->
+<div class="column is-four-fifths" display="flex" justify-content="space-around" >
+    <div>
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/bremenSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/bremenEMA.png" />
+        </img-comparison-slider>
+    </div>
+    <div>
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/hamburgSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/hamburgEMA.png" />
+        </img-comparison-slider>
+    </div>
+    <div>
+        <img-comparison-slider>
+            <img slot="first" src="/Scribbles4All/static/image/dusseldorfSUP.png" />
+            <img slot="second" src="/Scribbles4All/static/image/dusseldorfEMA.png" />
+        </img-comparison-slider>
+    </div>
+</div>
 
 ## How do the s4-datasets look like?
 ![datasets overview](./static/image/qualitative.png)
