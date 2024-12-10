@@ -1,0 +1,24 @@
+{
+    "height_distortion": 0.9,
+    "min_binary_erosion": 2,
+    "max_binary_erosion": 40,
+    "it_extra_erosion": 5,
+    "min_erosion_area_share": 0.007,
+    "max_erosion_area_share": 0.07,
+    "background_px_value": [
+        0,
+        0,
+        0
+    ],
+    "background_input_values": [
+        0
+    ],
+    "ignore_values": [
+        0
+    ],
+    "patience": 20,
+    "error_tolerance_px": 0,
+    "min_blob_area": 300,
+    "line_thickness": 5,
+    "scribble_scale": 0.95
+}

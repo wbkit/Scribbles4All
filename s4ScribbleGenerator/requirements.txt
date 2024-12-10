@@ -1,0 +1,8 @@
+h5py
+joblib
+matplotlib
+numpy
+opencv_python
+scipy
+skimage
+tqdm
