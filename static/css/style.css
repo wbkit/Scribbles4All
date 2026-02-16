@@ -1,0 +1,143 @@
+:root {
+  --text-color: #222;
+  --muted-color: #555;
+  --card-bg: #f5f5f5;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text-color);
+}
+
+.title.is-1 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+
+.title.is-3 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 600;
+  color: #006c66;
+}
+
+.publication-title {
+  font-family: "Google Sans", sans-serif;
+}
+
+.title-accent {
+  color: #006c66;
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.publication-authors {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.publication-affiliations .author-block {
+  display: block;
+  margin-right: 0;
+}
+
+.publication-venue {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: var(--muted-color);
+}
+
+.conference-subtitle {
+  color: #EF7C25;
+  font-family: "Google Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.button.is-dark.is-rounded {
+  background-color: #363636;
+}
+
+.hero-body {
+  padding-bottom: 2rem;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.figure-rounded {
+  border-radius: 10px;
+}
+
+.figure-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.figure-full {
+  width: 100%;
+  height: auto;
+}
+
+.figure-80 {
+  width: 80%;
+  height: auto;
+}
+
+.figure-66 {
+  width: 66.6667%;
+  height: auto;
+}
+
+.teaser-subtitle {
+  margin-top: 15px;
+}
+
+.section-block {
+  margin-top: 3rem;
+}
+
+.section-lead {
+  margin-bottom: 20px;
+}
+
+.section-space {
+  margin-top: 20px;
+}
+
+.section-caption {
+  margin-top: 10px;
+}
+
+.content h2 {
+  text-align: center;
+  font-family: "Google Sans", sans-serif;
+}
+
+.bibtex-section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+pre {
+  background-color: transparent;
+  padding: 0;
+}
+
+footer.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 3rem;
+}
+
+.content.has-text-justified {
+  text-align: justify;
+}
+
