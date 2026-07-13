@@ -1,56 +1,36 @@
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
+document.addEventListener('DOMContentLoaded', function () {
 
+  // Drag-to-compare sliders
+  document.querySelectorAll('.compare-range').forEach(function (range) {
+    range.addEventListener('input', function (e) {
+      var val = e.target.value;
+      var container = e.target.closest('.compare');
+      if (!container) return;
+      var img = container.querySelector('.compare-overlay');
+      var handle = container.querySelector('.compare-handle');
+      if (img) img.style.clipPath = 'inset(0 0 0 ' + val + '%)';
+      if (handle) handle.style.left = val + '%';
     });
+  });
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 3,
-			loop: true,
-			infinite: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
-    }
-
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-
-    // Loop on each carousel initialized
-    for(var i = 0; i < carousels.length; i++) {
-    	// Add listener to  event
-    	carousels[i].on('before:show', state => {
-    		console.log(state);
-    	});
-    }
-
-    // Access to bulmaCarousel instance of an element
-    var element = document.querySelector('#my-element');
-    if (element && element.bulmaCarousel) {
-    	// bulmaCarousel instance is available as element.bulmaCarousel
-    	element.bulmaCarousel.on('before-show', function(state) {
-    		console.log(state);
-    	});
-    }
-
-    /*var player = document.getElementById('interpolation-video');
-    player.addEventListener('loadedmetadata', function() {
-      $('#interpolation-slider').on('input', function(event) {
-        console.log(this.value, player.duration);
-        player.currentTime = player.duration / 100 * this.value;
-      })
-    }, false);*/
-    preloadInterpolationImages();
-
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
+  // BibTeX copy-to-clipboard
+  var copyBtn = document.querySelector('.bibtex-copy');
+  var bibtexPre = document.querySelector('.bibtex-wrap pre');
+  if (copyBtn && bibtexPre) {
+    var copyTimeout;
+    copyBtn.addEventListener('click', function () {
+      var text = bibtexPre.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(function () {});
+      }
+      copyBtn.classList.add('is-copied');
+      copyBtn.setAttribute('aria-label', 'Copied');
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(function () {
+        copyBtn.classList.remove('is-copied');
+        copyBtn.setAttribute('aria-label', 'Copy BibTeX');
+      }, 1600);
     });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+  }
 
-    bulmaSlider.attach();
-
-})
+});

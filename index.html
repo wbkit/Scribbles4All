@@ -1,245 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description"
+        content="Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets">
+  <meta name="keywords" content="scribble supervision, weakly supervised segmentation, semantic segmentation, benchmark, dataset">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scribbles for All - Benchmarking Scribble Supervised Segmentation Across Datasets</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
   <link rel="stylesheet" href="./static/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
 
-  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./static/js/index.js"></script>
-
-  <!-- MathJax -->
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [ ["$", "$"], ["\\(", "\\)"] ],
-        displayMath: [ ["$$", "$$"], ["\\[", "\\]"] ],
-        processEscapes: true,
-        tags: "all"
-      },
-      svg: {
-        fontCache: "global"
-      }
-    };
-  </script>
-  <script
-    type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
+  <script defer src="./static/js/index.js"></script>
 </head>
 <body>
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span class="title-accent">Scribbles for All</span> - Benchmarking Scribble Supervised Segmentation Across Datasets</h1>
-          <div class="is-size-3 conference">
-            <span class="conference-block">
-              <h3>NeurIPS2024 Datasets and Benchmarks</h3>
-            </span>
-          </div>
-          <div class="conference-subtitle">
-            <span class="conference-block">
-              <h4>Spotlight</h4>
-            </span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://wbkit.github.io/">Wolfgang Boettcher</a><sup>1</sup>, <a href="https://lhoyer.github.io/">Lukas Hoyer</a><sup>2</sup>,
-              <a href="https://www.linkedin.com/in/ozan-unal/">Ozan Unal</a><sup>2</sup>, <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>1</sup>,
-              <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/">Bernt Schiele</a><sup>1</sup>
-            </span>
-          </div>
+  <div class="hero-circles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <sup>1</sup>MPI for Informatics, Germany <br>
-              <sup>2</sup>ETH Zurich, Switzerland <br>
-            </span>
-          </div>
+  <div class="badge-row">
+    <span class="badge badge-venue">NeurIPS 2024 &middot; Datasets and Benchmarks</span>
+    <span class="badge badge-spotlight">Spotlight</span>
+  </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://www.arxiv.org/abs/2408.12489" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/wbkit/Scribbles4All" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/wbkit/Scribbles4All" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-database"></i>
-                  </span>
-                  <span>Data</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
+  <h1 class="hero-title"><span class="accent-text">Scribbles for All</span> &mdash; Benchmarking Scribble Supervised Segmentation Across Datasets</h1>
+
+  <div class="hero-authors">
+    <a href="https://wbkit.github.io/" target="_blank" rel="noopener">Wolfgang Boettcher<sup>1</sup></a>,
+    <a href="https://lhoyer.github.io/" target="_blank" rel="noopener">Lukas Hoyer<sup>2</sup></a>,
+    <a href="https://www.linkedin.com/in/ozan-unal/" target="_blank" rel="noopener">Ozan Unal<sup>2</sup></a>,
+    <a href="https://janericlenssen.github.io/" target="_blank" rel="noopener">Jan Eric Lenssen<sup>1</sup></a>,
+    <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele/" target="_blank" rel="noopener">Bernt Schiele<sup>1</sup></a>
+  </div>
+
+  <div class="hero-affiliations">
+    <sup>1</sup>MPI for Informatics, Germany&nbsp;&nbsp;&nbsp;<sup>2</sup>ETH Zurich, Switzerland
+  </div>
+
+  <div class="button-row">
+    <a class="btn btn-primary" href="https://www.arxiv.org/abs/2408.12489" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 13h6M9 17h6"></path></svg>
+      Paper
+    </a>
+    <a class="btn btn-secondary" href="https://github.com/wbkit/Scribbles4All" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18 4 14l4-4M16 6l4 4-4 4"></path><path d="M13 4 11 20"></path></svg>
+      Code
+    </a>
+    <a class="btn btn-secondary" href="https://github.com/wbkit/Scribbles4All" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"></path></svg>
+      Data
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <hr class="rubric-rule">
+  <h2 class="section-title">Abstract</h2>
+  <p>
+    In this work, we introduce Scribbles for All, a label and training data generation
+    algorithm for semantic segmentation trained on scribble labels. Training or
+    fine-tuning semantic segmentation models with weak supervision has become an
+    important topic recently and was subject to significant advances in model quality.
+    In this setting, scribbles are a promising label type to achieve high quality segmentation
+    results while requiring a much lower annotation effort than usual pixel-wise
+    dense semantic segmentation annotations. The main limitation of scribbles as
+    source for weak supervision is the lack of challenging datasets for scribble segmentation,
+    which hinders the development of novel methods and conclusive evaluations.
+    To overcome this limitation, Scribbles for All provides scribble labels for several
+    popular segmentation datasets and provides an algorithm to automatically generate
+    scribble labels for any dataset with dense annotations, paving the way for new
+    insights and model advancements in the field of weakly supervised segmentation.
+    In addition to providing datasets and algorithm, we evaluate state-of-the-art segmentation
+    models on our datasets and show that models trained with our synthetic
+    labels perform competitively with respect to models trained on manual labels.
+    Thus, our datasets enable state-of-the-art research into methods for scribble-labeled
+    semantic segmentation. The datasets, scribble generation algorithm, and baselines
+    are publicly available <a href="https://github.com/wbkit/Scribbles4All" target="_blank" rel="noopener">here</a>.
+  </p>
+</section>
+
+<section class="section">
+  <hr class="rubric-rule">
+  <h2 class="section-title">Which problem does Scribbles4All (s4) solve?</h2>
+
+  <img class="figure" src="./static/image/teaserNew.png" alt="visual abstract">
+
+  <p>
+    The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for scribble segmentation.
+    This impedes the development of novel methods and conclusive evaluations. Two challenges emerge for the research area of
+    scribble-supervised segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC
+    is too easy to serve as the sole benchmark for scribble-supervised methods as visualized above.
+  </p>
+
+  <p>Therefore, we present Scribbles for All:</p>
+  <div class="bullet-list">
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span>We present an algorithm to convert every densely-labelled dataset into a scribble supervised dataset</span></div>
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span>We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360</span></div>
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span>We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <hr class="rubric-rule">
+  <h2 class="section-title">How do the s4-datasets look like?</h2>
+
+  <img class="figure" src="./static/image/qualitative.png" alt="datasets overview">
+
+  <p>
+    The images displayed above illustrate the scribble labels generated for the s4-datasets, superimposed on the
+    scene image. Furthermore, a dense segmentation map is provided for comparison purposes, as well as the prediction
+    of a state-of-the-art (SOTA) method trained on the s4-scribble dataset. Each instance on the original segmentation
+    map is labelled with a scribble if it exceeds a minimum area threshold dependent on the dataset. Furthermore, this
+    illustrates the necessity for more complex scribble datasets, which is addressed by this work. While the predictions
+    for s4Pascal//ScribbleSup are very close to fully supervised standards, the disparity between ground-truth and
+    prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets
+    and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
+  </p>
+</section>
+
+<section class="section">
+  <hr class="rubric-rule">
+  <h2 class="section-title">How do SOTA methods perform on s4Datasets?</h2>
+
+  <p>
+    Below, we illustrate the prediction differences of models trained on our challenging s4Datasets compared to
+    a fully supervised model. (The examples are generated with the SegformerB4-backbone, the SASS method is EMA)
+  </p>
+
+  <div class="compare-grid">
+    <div class="compare">
+      <img src="./static/image/bremenSUP.png" alt="Bremen supervised">
+      <img class="compare-overlay" src="./static/image/bremenEMA.png" alt="Bremen EMA">
+      <div class="compare-handle">
+        <span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        </span>
       </div>
+      <div class="compare-badge">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        Drag to compare
+      </div>
+      <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Bremen comparison slider">
+    </div>
+    <div class="compare">
+      <img src="./static/image/hamburgSUP.png" alt="Hamburg supervised">
+      <img class="compare-overlay" src="./static/image/hamburgEMA.png" alt="Hamburg EMA">
+      <div class="compare-handle">
+        <span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        </span>
+      </div>
+      <div class="compare-badge">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        Drag to compare
+      </div>
+      <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Hamburg comparison slider">
+    </div>
+    <div class="compare">
+      <img src="./static/image/dusseldorfSUP.png" alt="Dusseldorf supervised">
+      <img class="compare-overlay" src="./static/image/dusseldorfEMA.png" alt="Dusseldorf EMA">
+      <div class="compare-handle">
+        <span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        </span>
+      </div>
+      <div class="compare-badge">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"></path><path d="M16 8l4 4-4 4"></path></svg>
+        Drag to compare
+      </div>
+      <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Dusseldorf comparison slider">
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <div class="content">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              In this work, we introduce Scribbles for All, a label and training data generation
-              algorithm for semantic segmentation trained on scribble labels. Training or
-              fine-tuning semantic segmentation models with weak supervision has become an
-              important topic recently and was subject to significant advances in model quality.
-              In this setting, scribbles are a promising label type to achieve high quality segmentation
-              results while requiring a much lower annotation effort than usual pixel-wise
-              dense semantic segmentation annotations. The main limitation of scribbles as
-              source for weak supervision is the lack of challenging datasets for scribble segmentation,
-              which hinders the development of novel methods and conclusive evaluations.
-              To overcome this limitation, Scribbles for All provides scribble labels for several
-              popular segmentation datasets and provides an algorithm to automatically generate
-              scribble labels for any dataset with dense annotations, paving the way for new
-              insights and model advancements in the field of weakly supervised segmentation.
-              In addition to providing datasets and algorithm, we evaluate state-of-the-art segmentation
-              models on our datasets and show that models trained with our synthetic
-              labels perform competitively with respect to models trained on manual labels.
-              Thus, our datasets enable state-of-the-art research into methods for scribble-labeled
-              semantic segmentation. The datasets, scribble generation algorithm, and baselines
-              are publicly available <a href="https://github.com/wbkit/Scribbles4All">here</a>.
-            </p>
-          </div>
-        </div>
-      </div>
+  <hr class="rubric-rule">
+  <h2 class="section-title">How are the datasets generated?</h2>
 
-      <hr>
+  <img class="figure" src="./static/image/ScribbleGen3.png" alt="Main algorithm steps">
 
-      <h2 class="title is-3">Which problem does Scribbles4All (s4) solve?</h2>
+  <p>
+    The presented scribble generation algorithm takes an image with corresponding dense segmentation
+    labels as input and produces a single scribble, represented as a set of points, for each object in the
+    image. We formulate the following design objectives:
+  </p>
 
-      <img class="figure-rounded figure-shadow section-lead" src="./static/image/teaserNew.png" alt="visual abstract">
+  <div class="bullet-list">
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span><strong>Mimic human annotations.</strong> The generated scribbles should approximately resemble scribbles that human annotators draw. Specifically, they are supposed to be more coarse for larger, simple geometries and more precise for detailed objects, as would be the case with hand-crafted labels. Also, the scribble is expected to go roughly through the centre part of an object and not to come too close to its margins for a large portion of its length.</span></div>
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span><strong>Probabilistic generation.</strong> The generation of labels should occur in a probabilistic fashion to prevent mean collapse when confronted with similar shapes, maintaining enough variance in the labelling process.</span></div>
+    <div class="bullet-item"><span class="bullet-arrow">&#8618;</span><span><strong>No boundary violation.</strong> We also apply hard constraints that prevent scribbles from violating any class boundaries.</span></div>
+  </div>
 
-      <p class="section-space">
-        The primary limitation of scribbles as a source for weak supervision is the lack of challenging datasets for scribble segmentation.
-        This impedes the development of novel methods and conclusive evaluations. Two challenges emerge for the research area of
-        scribble-supervised segmentation methods. Firstly, generalization of methods to other datasets cannot be verified. Secondly, PascalVOC
-        is too easy to serve as the sole benchmark for scribble-supervised methods as visualized above.
-      </p>
+  <p>The fundamental steps of the algorithm are outlined in the figure above.</p>
 
-      <p>Therefore, we present Scribbles for All:</p>
-      <ul>
-        <li>We present an algorithm to convert every densely-labelled dataset into a scribble supervised dataset</li>
-        <li>We provide an initial set of four scribble-supervised datasets based on popular segmentation datasets - s4-datasets based on PascalVOC, ADE20K, Cityscapes and KITTI360</li>
-        <li>We benchmark these datasets on SOTA weakly-supervised semantic segmentation methods</li>
-      </ul>
+  <ol class="steps-list">
+    <li>Size dependent erosion,</li>
+    <li>COM in red, sampling of points on the edge in green, determination of the approx. farthest pair in darker green and tentative scribble in blue</li>
+    <li>Sampling of two extra points along the tentative scribble</li>
+    <li>Fitting final scribble through points</li>
+    <li>Scribble overlayed on initial segmentation map.</li>
+  </ol>
 
-      <h2 class="title is-3">How do the s4-datasets look like?</h2>
+  <p>For further details feel free to read the paper.</p>
+</section>
 
-      <img class="figure-rounded figure-shadow section-lead" src="./static/image/qualitative.png" alt="datasets overview">
-
-      <p class="section-space">
-        The images displayed above illustrate the scribble labels generated for the s4-datasets, superimposed on the
-        scene image. Furthermore, a dense segmentation map is provided for comparison purposes, as well as the prediction
-        of a state-of-the-art (SOTA) method trained on the s4-scribble dataset. Each instance on the original segmentation
-        map is labelled with a scribble if it exceeds a minimum area threshold dependent on the dataset. Furthermore, this
-        illustrates the necessity for more complex scribble datasets, which is addressed by this work. While the predictions
-        for s4Pascal//ScribbleSup are very close to fully supervised standards, the disparity between ground-truth and
-        prediction is higher for the more complex datasets. This emphasises the greater difficulty posed by these datasets
-        and establishes meaningful benchmarks for more sophisticated weakly supervised segmentation methods.
-      </p>
-
-      <h2 class="title is-3">How do SOTA methods perform on s4Datasets?</h2>
-      <p>
-        Below, we illustrate the prediction differences of models trained on our challenging s4Datasets compared to
-        a fully supervised model. (The examples are generated with the SegformerB4-backbone, the SASS method is EMA)
-      </p>
-      <div class="columns is-centered has-text-centered section-block" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px;">
-        <div style="flex: 1; text-align: center; padding: 5px;">
-          <img-comparison-slider>
-            <img slot="first" src="./static/image/bremenSUP.png">
-            <img slot="second" src="./static/image/bremenEMA.png">
-          </img-comparison-slider>
-        </div>
-        <div style="flex: 1; text-align: center; padding: 5px;">
-          <img-comparison-slider>
-            <img slot="first" src="./static/image/hamburgSUP.png">
-            <img slot="second" src="./static/image/hamburgEMA.png">
-          </img-comparison-slider>
-        </div>
-        <div style="flex: 1; text-align: center; padding: 5px;">
-          <img-comparison-slider>
-            <img slot="first" src="./static/image/dusseldorfSUP.png">
-            <img slot="second" src="./static/image/dusseldorfEMA.png">
-          </img-comparison-slider>
-        </div>
-      </div>
-
-      <h2 class="title is-3">How are the datasets generated?</h2>
-
-      <img class="figure-rounded figure-shadow section-lead" src="./static/image/ScribbleGen3.png" alt="Main algorithm steps">
-
-      <p class="section-space">
-        The presented scribble generation algorithm takes an image with corresponding dense segmentation
-        labels as input and produces a single scribble, represented as a set of points, for each object in the
-        image. We formulate the following design objectives:
-      </p>
-      <ol>
-        <li>
-          <strong>Mimic human annotations.</strong> The generated scribbles should approximately resemble scribbles
-          that human annotators draw. Specifically, they are supposed to be more coarse for larger, simple
-          geometries and more precise for detailed objects, as would be the case with hand-crafted labels.
-          Also, the scribble is expected to go roughly through the centre part of an object and not to come
-          too close to its margins for a large portion of its length.
-        </li>
-        <li>
-          <strong>Probabilistic generation.</strong> The generation of labels should occur in a probabilistic fashion to
-          prevent mean collapse when confronted with similar shapes, maintaining enough variance in the
-          labelling process.
-        </li>
-        <li>
-          <strong>No boundary violation.</strong> We also apply hard constraints that prevent scribbles from violating
-          any class boundaries.
-        </li>
-      </ol>
-
-      <p>The fundamental steps of the algorithm are outlined in the figure above.</p>
-      <ol type="a">
-        <li>Size dependent erosion,</li>
-        <li>COM in red, sampling of points on the edge in green, determination of the approx. farthest pair in darker green and tentative scribble in blue</li>
-        <li>Sampling of two extra points along the tentative scribble</li>
-        <li>Fitting final scribble through points</li>
-        <li>Scribble overlayed on initial segmentation map.</li>
-      </ol>
-
-      <p>For further details feel free to read the paper.</p>
-
-      <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-          <h2 class="title">BibTeX</h2>
-          <div class="bibtex-section">
-            <pre><code>@inproceedings{boettcherScribblesAllBenchmarking2024,
+<section class="section section-bibtex">
+  <hr class="rubric-rule">
+  <h2 class="section-title">BibTeX</h2>
+  <div class="bibtex-wrap">
+    <pre><code>@inproceedings{boettcherScribblesAllBenchmarking2024,
   title = {Scribbles for All: {{Benchmarking}} Scribble Supervised Segmentation across Datasets},
   booktitle = {Advances in Neural Information Processing Systems},
   author = {Boettcher, Wolfgang and Hoyer, Lukas and Unal, Ozan and Lenssen, Jan Eric and Schiele, Bernt},
@@ -250,27 +222,16 @@
   publisher = {Curran Associates, Inc.},
   doi = {10.52202/079017-1463},
   url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/51cd2b3608d7ae17a9fadcc6e1f68629-Paper-Datasets_and_Benchmarks_Track.pdf}
-}
-</code></pre>
-          </div>
-        </div>
-      </section>
-    </div>
+}</code></pre>
+    <button type="button" class="icon-btn bibtex-copy" aria-label="Copy BibTeX">
+      <svg class="icon-clipboard" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+      <svg class="icon-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+    </button>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer class="site-footer">
+  <p>Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">NeRFies</a>.</p>
 </footer>
 
 </body>
